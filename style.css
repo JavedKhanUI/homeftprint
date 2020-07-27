@@ -168,14 +168,12 @@ header.masthead h1 {
 .program-card {
     min-width: 290px;
 }
-.feature-img {
-    width: 125px;
-}
 
 .why-ft .card {
     border-radius: 1.5em;
 }
 .feature-img {
+    width: 150px;
     margin: 18px auto;
 }
 
@@ -445,6 +443,9 @@ header.masthead h1 {
 .why-ft .title-text h3 {
     font-size: 17px;
     line-height: 30px;
+}
+.similar .title-text h3 {
+    font-size: 20px;
 }
 .feature-listing .card-title {
     font-size: 17px;

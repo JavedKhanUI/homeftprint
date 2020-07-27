@@ -168,15 +168,18 @@ header.masthead h1 {
 }
 
 .subscription .sub-list .col:first-child .card {
+    border-radius: 13px;
     background: #EF9B18;
     color: #fff;
 }
     
 .subscription .sub-list .col:nth-child(2) .card {
+    border-radius: 13px;
     background:#62D0CA;
     color: #fff;
 }
 .subscription .sub-list .col:last-child .card {
+    border-radius: 13px;
     background:#37ABCF;
     color: #fff;
 }
@@ -310,7 +313,8 @@ header.masthead h1 {
     z-index: 9999;
 }
 .btn-request {
-    background: #7e39d3;
+    background-color: #04BF74;
+    border-color: #04BF74;
     color: #fff;
     border-radius: 0;
     padding: 16px 0;
@@ -339,9 +343,27 @@ header.masthead h1 {
     border-radius: 50%;
 }
 
-/* Featurettes
+/* Similar -Table
 ------------------------- */
 
+table tr:nth-child(3) th, table tr:nth-child(4) th, table tr:nth-child(5) th {
+    background-color: #E0E0E0;
+    padding: 5px;
+    padding-left: 8px;
+    width: 10%;
+}
+table tr:nth-child(3) td:nth-child(even), 
+table tr:nth-child(4) td:nth-child(even), 
+table tr:nth-child(5) td:nth-child(even) {
+    background-color: #f6f6f6;
+    border: .1rem solid #eaeaea;
+}
+table tr.bdr {
+    border: .1rem solid #eaeaea;
+}
+.bdr td:last-child {
+    border-right: 2px solid #eaeaea !important;
+}
 
 
 /* RESPONSIVE CSS
@@ -367,11 +389,10 @@ header.masthead h1 {
 }
 
 
-
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) { 
 
-.navbar-brand img { width: 135px;}
+.navbar-brand img { width: 200px;}
 
 .navbar-nav .nav-link { text-align: center;}
     
@@ -383,10 +404,10 @@ header.masthead {
 }
 
 header.masthead h1 {
-    font-size: 12px;
+    font-size: 18px;
     text-align: left;
-    line-height: 19px;
-    margin-left: 12px;
+    line-height: 27px;
+    margin-left: 27px;
 }
     
 .credibility p.card-title.h5 {
@@ -437,6 +458,53 @@ header.masthead h1 {
 
     
 }
+
+/*Portrait and landscape iPhone 5 and iPhone 5S*/
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px) 
+  and (-webkit-min-device-pixel-ratio: 2){
+     header.masthead { padding-top: 5rem;}
+    .masthead .masthead-bg { width: 54vh; height: 54vh;}
+     header.masthead h1 { font-size: 13px;}
+}
+
+/*Portrait and landscape iPhone 6 and iPhone 6S*/
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2){
+    
+.masthead .masthead-bg { right: -7em;width: 50vh;height: 50vh;}
+header.masthead h1 {font-size: 16px;}
+    
+}
+
+/*Portrait and landscape iPhone 6 Plus and iPhone 6S Plus*/
+
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+    and (-webkit-min-device-pixel-ratio: 3){
+    
+  header.masthead h1 { font-size: 18px;}
+        
+}
+
+/*iPhone X in portrait & landscape*/
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+    
+.masthead .masthead-bg {  width: 40vh;height: 40vh;}
+ header.masthead h1 { margin-left: 33px;}
+
+}
+
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) { 

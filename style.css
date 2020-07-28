@@ -14,6 +14,7 @@
 .btn-call span svg {
     vertical-align: text-bottom;
 }
+
 main { padding-top: 5em;}
 
 header.masthead {
@@ -322,18 +323,25 @@ header.masthead h1 {
     border-color: #FEBA2E;
     z-index: 9999;
 }
-.btn-request {
-    background-color: #04BF74;
-    border-color: #04BF74;
+
+.btn-contact{ background-color: #04BF74;border-color: #04BF74;}
+
+.btn-request {background-color: #7e39d3;border-color: #7e39d3;}
+
+.btn-common {
     color: #fff;
     border-radius: 0;
     padding: 16px 0;
 }
-.btn-request span {
+.btn-common span {
     background: #fff;
     border-radius: 50%;
     padding: 8px;
 }
+.btn-common svg {
+    vertical-align: text-bottom;
+}
+
 .masthead {
     position: relative;
     overflow: hidden;
@@ -356,15 +364,13 @@ header.masthead h1 {
 /* Similar -Table
 ------------------------- */
 
-table tr:nth-child(3) th, table tr:nth-child(4) th, table tr:nth-child(5) th {
+table tr.bdr th {
     background-color: #E0E0E0;
     padding: 5px;
     padding-left: 8px;
     width: 10%;
 }
-table tr:nth-child(3) td:nth-child(even), 
-table tr:nth-child(4) td:nth-child(even), 
-table tr:nth-child(5) td:nth-child(even) {
+table tr.bdr td.wbr:nth-child(even){
     background-color: #f6f6f6;
     border: .1rem solid #eaeaea;
 }
@@ -419,10 +425,12 @@ header.masthead h1 {
     line-height: 27px;
     margin-left: 27px;
 }
-    
+.credibility img {
+    width: 33px;
+}   
 .credibility p.card-title.h5 {
-    font-size: 10px;
-    line-height: 16px;
+    font-size: 15px;
+    line-height: 24px;
     font-weight: 700;
 }
   .video-play-button:after {
@@ -481,9 +489,19 @@ header.masthead h1 {
   and (max-device-width: 568px) 
   and (-webkit-min-device-pixel-ratio: 2){
      header.masthead { padding-top: 5rem;}
-    .masthead .masthead-bg { width: 54vh; height: 54vh;}
-     header.masthead h1 { font-size: 13px;}
+    .masthead .masthead-bg { width: 49vh; height: 49vh;}
+     header.masthead h1 {font-size: 11px; margin-left: 4em;}
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 640px) 
+  and (-webkit-min-device-pixel-ratio: 3){
+     header.masthead { padding-top: 5rem;}
+    .masthead .masthead-bg {width: 44vh;height: 44vh;}
+     header.masthead h1 {font-size: 11px; margin-left:6em;}
+}
+
 
 /*Portrait and landscape iPhone 6 and iPhone 6S*/
 
@@ -492,9 +510,59 @@ header.masthead h1 {
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2){
     
-.masthead .masthead-bg { right: -7em;width: 50vh;height: 50vh;}
-header.masthead h1 {font-size: 16px;}
-    
+    .masthead .masthead-bg { right: -7em;width: 44vh;height: 44vh;}
+      
+    header.masthead h1 { font-size: 13px;margin-left: 64px;} 
+}
+
+
+/*iPhone X in portrait & landscape*/
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+header.masthead {height: 30vh;}
+.masthead .masthead-bg {
+    width: 37vh;
+    height: 37vh;
+}
+ header.masthead h1 {
+    margin-left: 64px;
+    font-size: 12px;
+}
+
+}
+
+/*Google Pixel 2 Media Queries (In terms of Mobile only)*/
+
+@media only screen and (min-width: 411px) and (max-width: 767px)
+and (-webkit-min-device-pixel-ratio: 2.6){ 
+
+.masthead .masthead-bg {
+    width: 40vh;
+    height: 40vh;
+}
+header.masthead h1 {
+    font-size: 12px;
+    margin-left: 8em;
+}
+
+}
+/*Google Pixel 2 XL Media Queries (In terms of Mobile only)*/
+
+@media only screen and (min-width: 411px) and (max-width: 767px)
+and (-webkit-min-device-pixel-ratio: 3.5){ 
+
+.masthead .masthead-bg {
+    width: 35vh;
+    height: 35vh;
+}
+header.masthead h1 {
+    font-size: 12px;
+    margin-left: 8em;
+}
+
 }
 
 /*Portrait and landscape iPhone 6 Plus and iPhone 6S Plus*/
@@ -504,21 +572,10 @@ header.masthead h1 {font-size: 16px;}
   and (max-device-width: 736px) 
     and (-webkit-min-device-pixel-ratio: 3){
     
-  header.masthead h1 { font-size: 18px;}
+    header.masthead h1 {  margin-left: 8em; font-size: 12px;}
         
 }
 
-/*iPhone X in portrait & landscape*/
-
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 812px)
-and (-webkit-device-pixel-ratio : 3) {
-    
-.masthead .masthead-bg {  width: 40vh;height: 40vh;}
- header.masthead h1 { margin-left: 33px;}
-
-}
 
 
 /* Small devices (landscape phones, 576px and up)*/

@@ -17,15 +17,36 @@
 
 <style amp-runtime i-amphtml-version="011905222334000">html {overflow-x: hidden}</style>
     
+ <!--Google Fonts-->
+<link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/css2?family=Montserrat:wght@400;500;700;800&family=Quicksand:wght@400;500;700&display=swap" crossorigin>
+    
+<!-- Favicon-->
+<link href="../assets/favicon/favicon.ico" rel="icon" type="image/x-icon" />
+    
+<!--Canonical-->
+<link rel="canonical" href="#">
+
+<!--Link-->
+<link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+<link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-form-0.1.js">
+<link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-accordion-0.1.js">
+<link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js">
+<link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-bind-0.1.js">
+ <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-video-0.1.js">   
+<link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js">
+<link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-animation-0.1.js">
+<link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js">
+    
 <!--Script-->
 <script async src="https://cdn.ampproject.org/v0.js"></script>
-
 <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script> 
-<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
-<script async custom-element="amp-vimeo" src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script>
 <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
 <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+
+<!--Video-->
+<script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+
 <!--  Import amp-position-observer extension -->
 <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
 
@@ -33,16 +54,7 @@
 <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
     
 <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
-
-
-<!-- Favicon-->
-<link href="../assets/favicon/favicon.ico" rel="icon" type="image/x-icon" />
     
-<!--Google Fonts-->
-<link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/css2?family=Montserrat:wght@400;500;700;800&family=Quicksand:wght@400;500;700&display=swap" crossorigin>
-    
-<!--Canonical-->
-<link rel="canonical" href="./index.html">
     
 <script type="application/ld+json">
       {
@@ -182,7 +194,6 @@ h3{font-size:1.75rem;}
 .btn-link:disabled{color:#6c757d;pointer-events:none;}
 .btn-lg{padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.3rem;}
 .btn-block{display:block;width:100%;}
-.btn-block+.btn-block{margin-top:.5rem;}
 .fade{transition:opacity .15s linear;}
 @media (prefers-reduced-motion:reduce){
 .fade{transition:none;}
@@ -256,7 +267,7 @@ h3{font-size:1.75rem;}
 .close{float:right;font-size:1.5rem;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.5;}
 .close:hover{color:#000;text-decoration:none;}
 button.close{padding:0;background-color:transparent;border:0;}
-.modal{position:fixed;top:0;left:0;z-index:1050;display:none;width:100%;height:100%;overflow:hidden;outline:0;}
+.modal{position:fixed;top:0;left:0;z-index:1050;width:100%;height:100%;overflow:hidden;outline:0;}
 .modal-dialog{position:relative;width:auto;margin:.5rem;pointer-events:none;}
 .modal.fade .modal-dialog{transition:-webkit-transform .3s ease-out;transition:transform .3s ease-out;transition:transform .3s ease-out,-webkit-transform .3s ease-out;-webkit-transform:translate(0,-50px);transform:translate(0,-50px);}
 @media (prefers-reduced-motion:reduce){
@@ -376,6 +387,7 @@ main{padding-top:5em;}
 header.masthead{background:url("../assets/img/bg-top.jpg");background-position:center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover;height:70vh;}
 header.masthead h1{font-size:2.25rem;}
 .credibility .card{border:2px dashed #404E65;}
+.credibility .card .img-fluid {margin-top: 1em;}
 .credibility .col:first-child .card{border-color:#14BFA3;}
 .credibility .col:nth-child(2) .card{border-color:#F7CF1C;}
 .credibility .col:last-child .card{border-color:#914899;}
@@ -390,11 +402,11 @@ header.masthead h1{font-size:2.25rem;}
 .custom-select{color:#00c074;border:1px solid #00c074;}
 .program-view .title-text h2{font-size:21px;font-weight:600;line-height:35px;}
 .program-view .title-text p{font-size:14px;}
-.program-select select.custom-select{border-radius:2em;border:0;height:3em;font-size:17px;font-weight:700;padding-left:25px;}
+.program-select select.custom-select{border-radius:2em;border:0;height:3em;font-size:17px;font-weight:700;padding-left:25px;border: 1px solid #00c074;}
 .program-card:first-child{margin-left:25px;}
 .program-card{min-width:290px;}
 .why-ft .card{border-radius:1.5em;}
-.feature-img{width:150px;margin:18px auto;}
+.feature-img{width:150px;margin:18px auto;height: 180px;}
 .subscription .sub-list .col:first-child .card{border-radius:13px;background:#EF9B18;color:#fff;}
 .subscription .sub-list .col:nth-child(2) .card{border-radius:13px;background:#62D0CA;color:#fff;}
 .subscription .sub-list .col:last-child .card{border-radius:13px;background:#37ABCF;color:#fff;}
@@ -407,16 +419,16 @@ header.masthead h1{font-size:2.25rem;}
 .faq-list .card, .faq-list .card h4 {border-radius: 1.5em;}
 .parentReview .card{position:relative;border-radius:1.5em;}
 .parentReview .feature-img{position:absolute;top:0;left:50%;transform:translate(-50%, -50%);width:110px;}
-.parentReview .card .card-body{padding-top:5em;}
 .parentReview .card-body .card-title:first-child{font-weight:800;color:#404E65;}
 .parentReview .card-body .card-title:nth-child(2){color:#37ABCF;font-weight:700;}
+.scrollToTop { color: #fff; font-size: 1.8em; box-shadow: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12); width: 50px; height: 50px; border-radius: 15%; border: none; outline: none; background: #fca509; z-index: 9999; bottom: 10px; right: 25px; position: fixed; opacity: 0; visibility: hidden; }
 .mediaCoverage .card-deck .card img{filter:gray;-webkit-filter:grayscale(1);-webkit-transition:all .8s ease-in-out;}
 .back-to-top{position:fixed;bottom:25px;right:25px;display:none;color:#ffffff;background-color:#FEBA2E;border-color:#FEBA2E;z-index:9999;}
 .btn-contact{background-color:#04BF74;border-color:#04BF74;}
 .btn-request{background-color:#7e39d3;border-color:#7e39d3;}
 .btn-common{color:#fff;border-radius:0;padding:16px 0;}
-.btn-common span{background:#fff;border-radius:50%;padding:8px;}
-.btn-common svg{vertical-align:text-bottom;}
+.btn-common span{background:#fff;border-radius:50%;padding:8px;width: 40px;height: 40px;}
+.btn-common svg{vertical-align:top;}
 .masthead{position:relative;overflow:hidden;padding-bottom:3rem;z-index:2;}
 .masthead .masthead-bg{position:absolute;top:0;bottom:0;right:-7em;width:44vh;height:44vh;background-color:rgb(34 193 224);transform:skewY(0);transform-origin:bottom left;border-radius:50%;}
 table tr.bdr th{background-color:#E0E0E0;padding:5px;padding-left:8px;width:10%;}
@@ -435,8 +447,7 @@ header.masthead h1{font-size:18px;text-align:left;line-height:27px;margin-left:2
 .video-play-button span{border-left:22px solid #fff;border-top:12px solid transparent;border-bottom:12px solid transparent;}
 .why-ft .title-text h3{font-size:17px;line-height:30px;}
 .similar .title-text h3{font-size:20px;}
-.parentReview .col:first-child{margin-top:1em;margin-bottom:5em;}
-.parentReview .col:nth-child(2){margin:1em 0 6em 0;}
+.parentReview .col:nth-child(2){margin:1em 0 0 0;}
 .back-to-top{bottom:85px;}
 .mediaCoverage .card-deck .card{width:70%;margin:0 auto;text-align:center;}
 }
@@ -444,6 +455,7 @@ header.masthead h1{font-size:18px;text-align:left;line-height:27px;margin-left:2
 header.masthead{padding-top:5rem;}
 .masthead .masthead-bg{width:49vh;height:49vh;}
 header.masthead h1{font-size:11px;margin-left:4em;}
+.scrollToTop { bottom: 90px; }
 }
 @media only screen    and (min-device-width: 320px)    and (max-device-width: 640px)    and (-webkit-min-device-pixel-ratio: 3){
 header.masthead{padding-top:5rem;}
@@ -493,18 +505,128 @@ header.masthead h1{font-size:2.5rem;}
 .masthead .masthead-bg{width:80vh;height:80vh;}
 .program-card{width:32%;min-width:345px;}
 .feature-img{width:180px;}
-.parentReview .col{margin-top:3.5em;}
 .masthead{height:10vh;min-height:0;padding-bottom:0;}
 }
 /*! CSS Used keyframes */
 @keyframes pulse-border{0%{transform:translateX(-50%) translateY(-50%) translateZ(0) scale(1);opacity:1;}100%{transform:translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);opacity:0;}}
 @keyframes pulse-border{0%{transform:translateX(-50%) translateY(-50%) translateZ(0) scale(1);opacity:1;}100%{transform:translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);opacity:0;}}
+    
+amp-lightbox { z-index: 9999;}
+    
+.lightbox {
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+    
+#header-sidebar nav ul li {
+    padding: 10px 60px 10px 30px;
+    color: #565656;
+    background: #fff;
+}
+#header-sidebar nav ul li a {
+    color: #444;
+    font-weight: 500;
+}
+#header-sidebar .closeslide {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+  /* Wrapper that hosts the video and the overlay */
+  .video-player {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Overlay fills the parent and sits on top of the video */
+  .click-to-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .poster-image {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .poster-image img {
+    object-fit: cover;
+  }
+
+  .video-title {
+    position: absolute;
+    z-index: 2;
+
+    /* Align to the top left */
+    top: 0;
+    left: 0;
+
+    font-size: 1.3em;
+    background-color: rgba(0,0,0,0.8);
+    color: #fafafa;
+    padding: 0.5rem;
+    margin: 0px;
+  }
+
+  .play-icon {
+    position: absolute;
+    z-index: 2;
+
+    width: 100px;
+    height: 100px;
+
+    background-image: url(../assets/play-icon.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    /* Align to the middle */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  .play-icon:hover, .play-icon:focus {
+    opacity: 1;
+  }
+
+  amp-accordion section[expanded] .show-more {
+      display: none;
+    }
+
+    amp-accordion section:not([expanded]) .show-less {
+      display: none;
+    }
+
+    .nested-accordion h4 {
+      font-size: 14px;
+      background-color: #ddd;
+    }
+
+    amp-accordion.hidden-header section[expanded] h4 {
+      border: none;
+    }
+    
 </style>
     
-<!--
-<link rel="preload" as="image" href="../assets/img/Online-Live-Classes-Background-sm" media="(max-width: 415px)">
-<link rel="preload" as="image" href="../assets/img/Online-Live-Classes-Background.jpg" media="(min-width: 416px)">
--->
+<link rel="preload" as="image" href="../assets/img/bg-top-sm.jpg" media="(max-width: 415px)">
+<link rel="preload" as="image" href="../assets/img/bg-top.jpg" media="(min-width: 416px)">
     
 </head>
 <body>
@@ -564,7 +686,8 @@ header.masthead h1{font-size:2.5rem;}
        <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-              <li class="nav-item"> <a class="nav-link" href="#">Policies</a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">Programs</a></li>
+             <li class="nav-item"> <a class="nav-link" href="#">Pricing</a></li>
             </ul>
           </div>
     </div>
@@ -580,7 +703,8 @@ header.masthead h1{font-size:2.5rem;}
   <nav class="ampstart-sidebar-nav ampstart-nav">
     <ul class="list-reset m0 p0 ampstart-label">
           <li class="ampstart-nav-item"><a class="ampstart-nav-link" href="#">Home</a></li>
-          <li class="ampstart-nav-item"><a class="ampstart-nav-link" href="#">Policies</a></li>
+          <li class="ampstart-nav-item"><a class="ampstart-nav-link" href="#">Programs</a></li>
+          <li class="ampstart-nav-item"><a class="ampstart-nav-link" href="#">Pricing</a></li>
      </ul>
   </nav>
 </amp-sidebar>
@@ -615,7 +739,7 @@ header.masthead h1{font-size:2.5rem;}
             <div class="card h-100">
               <amp-img src="../assets/img/family.svg" class="img-fluid m-auto pt-3" alt="Parents" width="50px" height="50" layout="fixed"></amp-img>
               <div class="card-body card-body pt-2 pb-3">
-               <p class="card-title h5 m-0"><span class="counting" data-count="20000">0</span><br>Parents served</p>
+               <p class="card-title h5 m-0">20,000 Parents served</p>
               </div>
             </div>
           </div>
@@ -645,12 +769,19 @@ header.masthead h1{font-size:2.5rem;}
                        <div class="card border-0 shadow program-card">
                           <div class="card-body pb-3">
                             <div class="mb-3">
-                                <amp-youtube
-                                  data-videoid="wdcMy7IMCuE"
-                                  layout="responsive"
-                                  width="100"
-                                  height="55">
-                                </amp-youtube>
+                                <div class="video-player">
+                                  <amp-video id="myVideo"
+                                    controls
+                                    width="100"
+                                    height="55"
+                                    layout="responsive"
+                                    src="../assets/Pre-School-Day-Care-and-Creche-Footprints.mp4">
+                                  </amp-video>
+                                  <div id="myOverlay" class="click-to-play-overlay">
+                                    <div class="play-icon" role="button" tabindex="0" on="tap:myOverlay.hide, myVideo.play"></div>
+                                   <amp-img class="poster-image" layout="fill" src="../assets/Pre-School-Day-Care-and-Creche-Footprints.jpg"></amp-img>
+                                  </div>
+                                </div>
                             </div>
                             <p class="card-title h5 mb-2">My Footprints Box</p>
                             <p class="m-0">Collection of books, worksheets, toys and activities to keep children engaged throughout the month.</p>
@@ -829,15 +960,18 @@ header.masthead h1{font-size:2.5rem;}
                   <li class="list-group-item py-2 px-0 bg-transparent"><amp-img src="../assets/img/check-circle.svg" alt="check-circle" class="mr-2" width="20px" height="20" layout="fixed"></amp-img>Expert Story Sessions</li>
                 </ul>
                 <a href="#" class="btn btn-block btn-light mb-3 mt-2 badge-pill shadow">Register for Unboxing Session</a>
-                <p class="m-0 text-center"><a data-toggle="collapse" href="#collapseEx1" role="button" aria-expanded="false" aria-controls="collapseEx1" class="text-dark font-weight-bold">See More <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                </svg></a></p> 
+                <amp-accordion class="sample" disable-session-states>
+                    <section>
+                      <h4 class="bg-transparent border-0 text-center"><span class="show-more text-dark">
+                           Show more <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg></span> 
+                          <span class="show-less text-dark">Show less</span>
+                      </h4>
+                      <p class="pt-3">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio,
+                        odio arcu in eu wisi. </p>
+                    </section>
+                </amp-accordion> 
               </div>
-                <div class="collapse" id="collapseEx1">
-                  <div class="card card-body border-0 pt-0">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                  </div>
-                </div>
             </div>
           </div>
          <div class="col mb-4">
@@ -861,15 +995,18 @@ header.masthead h1{font-size:2.5rem;}
                   <li class="list-group-item py-2 px-0 bg-transparent"><amp-img src="../assets/img/check-circle.svg" alt="check-circle" class="mr-2" width="20px" height="20" layout="fixed"></amp-img>Expert Story Sessions</li>
                 </ul>
                   <a href="#" class="btn btn-block btn-light mb-3 mt-2 badge-pill shadow">Register for Free Trial Class</a>
-                <p class="m-0 text-center"><a data-toggle="collapse" href="#collapseEx2" role="button" aria-expanded="false" aria-controls="collapseEx2"  class="text-dark font-weight-bold">See More <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                </svg></a></p> 
+                 <amp-accordion class="sample" disable-session-states>
+                    <section>
+                      <h4 class="bg-transparent border-0 text-center"><span class="show-more text-dark">
+                           Show more <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg></span> 
+                          <span class="show-less text-dark">Show less</span>
+                      </h4>
+                      <p class="pt-3">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio,
+                        odio arcu in eu wisi. </p>
+                    </section>
+                </amp-accordion>
               </div>
-                <div class="collapse" id="collapseEx2">
-                  <div class="card card-body border-0 pt-0">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                  </div>
-                </div>
             </div>
           </div>
         <div class="col mb-4">
@@ -885,22 +1022,26 @@ header.masthead h1{font-size:2.5rem;}
                   </div>
                 </div>
                 <ul class="list-group list-group-flush mt-3">
-                  <li class="list-group-item py-2 px-0 bg-transparent"><amp-img src="../assets/img/check-circle.svg" alt="check-circle" class="mr-2" width="20px" height="20" layout="fixed"></amp-img>Cras justo odio</li>
-                  <li class="list-group-item py-2 px-0 bg-transparent"><amp-img src="../assets/img/check-circle.svg" alt="check-circle" class="mr-2" width="20px" height="20" layout="fixed"></amp-img>Dapibus ac facilisis in</li>
-                  <li class="list-group-item py-2 px-0 bg-transparent"><amp-img src="../assets/img/check-circle.svg" alt="check-circle" class="mr-2" width="20px" height="20" layout="fixed"></amp-img>Morbi leo risus</li>
-                  <li class="list-group-item py-2 px-0 bg-transparent"><amp-img src="../assets/img/check-circle.svg" alt="check-circle" class="mr-2" width="20px" height="20" layout="fixed"></amp-img>Porta ac consectetur ac</li>
-                  <li class="list-group-item py-2 px-0 bg-transparent"><amp-img src="../assets/img/check-circle.svg" alt="check-circle" class="mr-2" width="20px" height="20" layout="fixed"></amp-img>Vestibulum at eros</li>
+                  <li class="list-group-item py-2 px-0 bg-transparent"><amp-img src="../assets/img/check-circle.svg" alt="check-circle" class="mr-2" width="20px" height="20" layout="fixed"></amp-img>Classes as per Planner of the Month</li>
+                  <li class="list-group-item py-2 px-0 bg-transparent"><amp-img src="../assets/img/check-circle.svg" alt="check-circle" class="mr-2" width="20px" height="20" layout="fixed"></amp-img>Small Group Classes</li>
+                  <li class="list-group-item py-2 px-0 bg-transparent"><amp-img src="../assets/img/check-circle.svg" alt="check-circle" class="mr-2" width="20px" height="20" layout="fixed"></amp-img>Age Appropriate Development</li>
+                  <li class="list-group-item py-2 px-0 bg-transparent"><amp-img src="../assets/img/check-circle.svg" alt="check-circle" class="mr-2" width="20px" height="20" layout="fixed"></amp-img>US Based Highscope Curriculum</li>
+                  <li class="list-group-item py-2 px-0 bg-transparent"><amp-img src="../assets/img/check-circle.svg" alt="check-circle" class="mr-2" width="20px" height="20" layout="fixed"></amp-img>Weekly Parenting Webinars</li>
+                  <li class="list-group-item py-2 px-0 bg-transparent"><amp-img src="../assets/img/check-circle.svg" alt="check-circle" class="mr-2" width="20px" height="20" layout="fixed"></amp-img>Expert Story Sessions</li>
                 </ul>
-                <a href="#" class="btn btn-block btn-light mb-3 mt-2 badge-pill shadow">Online Classes</a>
-                <p class="m-0 text-center"><a data-toggle="collapse" href="#collapseEx3" role="button" aria-expanded="false" aria-controls="collapseEx3"  class="text-dark font-weight-bold">See More <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                </svg></a></p> 
+                 <a href="#" class="btn btn-block btn-light mb-3 mt-2 badge-pill shadow">Register for Free Trial Class</a>
+                 <amp-accordion class="sample" disable-session-states>
+                    <section>
+                      <h4 class="bg-transparent border-0 text-center"><span class="show-more text-dark">
+                           Show more <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg></span> 
+                          <span class="show-less text-dark">Show less</span>
+                      </h4>
+                      <p class="pt-3">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio,
+                        odio arcu in eu wisi. </p>
+                    </section>
+                </amp-accordion>
               </div>
-                <div class="collapse" id="collapseEx3">
-                  <div class="card card-body border-0 pt-0">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                  </div>
-                </div>
             </div>
           </div>
         </div>
@@ -934,12 +1075,20 @@ header.masthead h1{font-size:2.5rem;}
                        <div class="card border-0 shadow program-card">
                           <div class="card-body pb-3">
                             <div class="mb-3">
-                               <amp-youtube
-                                  data-videoid="wdcMy7IMCuE"
-                                  layout="responsive"
-                                  width="100"
-                                  height="55">
-                                </amp-youtube>
+                               <div class="video-player">
+                                  <amp-video id="myVideo2"
+                                    controls
+                                    width="100"
+                                    height="55"
+                                    layout="responsive"
+                                    src="../assets/Pre-School-Day-Care-and-Creche-Footprints.mp4">
+                                  </amp-video>
+
+                                  <div id="myOverlay2" class="click-to-play-overlay">
+                                    <div class="play-icon" role="button" tabindex="0" on="tap:myOverlay2.hide, myVideo2.play"></div>
+                                    <amp-img class="poster-image" layout="fill" src="../assets/Pre-School-Day-Care-and-Creche-Footprints.jpg"></amp-img>
+                                  </div>
+                                </div>
                             </div>
                             <p class="card-title h5 mb-2">Kit Content for Toddlers</p>
                             <p class="m-0">(Age group: 0.5 - 1.5 Years)</p>
@@ -948,12 +1097,21 @@ header.masthead h1{font-size:2.5rem;}
                       <div class="card border-0 shadow program-card">
                           <div class="card-body pb-3">
                             <div class="mb-3">
-                               <amp-youtube
-                                  data-videoid="wdcMy7IMCuE"
-                                  layout="responsive"
-                                  width="100"
-                                  height="55">
-                                </amp-youtube>
+                               <div class="video-player">
+                                  <amp-video id="myVideo3"
+                                    controls
+                                    width="100"
+                                    height="55"
+                                    layout="responsive"
+                                    src="../assets/Pre-School-Day-Care-and-Creche-Footprints.mp4">
+                                  </amp-video>
+
+                                  <div id="myOverlay3" class="click-to-play-overlay">
+                                    <div class="play-icon" role="button" tabindex="0" on="tap:myOverlay3.hide, myVideo3.play"></div>
+
+                                    <amp-img class="poster-image" layout="fill" src="../assets/Pre-School-Day-Care-and-Creche-Footprints.jpg"></amp-img>
+                                  </div>
+                                </div>
                             </div>
                             <p class="card-title h5 mb-2">Kit Content for Play Group</p>
                             <p class="m-0">(Age group: 1.5 - 2.5 Years)</p>
@@ -962,12 +1120,21 @@ header.masthead h1{font-size:2.5rem;}
                         <div class="card border-0 shadow program-card">
                           <div class="card-body pb-3">
                             <div class="mb-3">
-                                <amp-youtube
-                                  data-videoid="wdcMy7IMCuE"
-                                  layout="responsive"
-                                  width="100"
-                                  height="55">
-                                </amp-youtube>
+                                <div class="video-player">
+                                  <amp-video id="myVideo4"
+                                    controls
+                                    width="100"
+                                    height="55"
+                                    layout="responsive"
+                                    src="../assets/Pre-School-Day-Care-and-Creche-Footprints.mp4">
+                                  </amp-video>
+
+                                  <div id="myOverlay4" class="click-to-play-overlay">
+                                    <div class="play-icon" role="button" tabindex="0" on="tap:myOverlay4.hide, myVideo4.play"></div>
+
+                                    <amp-img class="poster-image" layout="fill" src="../assets/Pre-School-Day-Care-and-Creche-Footprints.jpg"></amp-img>
+                                  </div>
+                                </div>
                             </div>
                             <p class="card-title h5 mb-2">Kit Content for Pre Nursery</p>
                             <p class="m-0">(Age group: 2.5 - 3.5 Years)</p>
@@ -976,12 +1143,21 @@ header.masthead h1{font-size:2.5rem;}
                         <div class="card border-0 shadow program-card">
                           <div class="card-body pb-3">
                             <div class="mb-3">
-                                <amp-youtube
-                                  data-videoid="wdcMy7IMCuE"
-                                  layout="responsive"
-                                  width="100"
-                                  height="55">
-                                </amp-youtube>
+                                <div class="video-player">
+                                  <amp-video id="myVideo5"
+                                    controls
+                                    width="100"
+                                    height="55"
+                                    layout="responsive"
+                                    src="../assets/Pre-School-Day-Care-and-Creche-Footprints.mp4">
+                                  </amp-video>
+
+                                  <div id="myOverlay5" class="click-to-play-overlay">
+                                    <div class="play-icon" role="button" tabindex="0" on="tap:myOverlay5.hide, myVideo5.play"></div>
+
+                                    <amp-img class="poster-image" layout="fill" src="../assets/Pre-School-Day-Care-and-Creche-Footprints.jpg"></amp-img>
+                                  </div>
+                                </div>
                             </div>
                             <p class="card-title h5 mb-2">Kit Content for Lower KG</p>
                             <p class="m-0">(Age group: 3.5 - 4.5 Years)</p>
@@ -990,12 +1166,21 @@ header.masthead h1{font-size:2.5rem;}
                         <div class="card border-0 shadow program-card">
                           <div class="card-body pb-3">
                             <div class="mb-3">
-                                <amp-youtube
-                                  data-videoid="wdcMy7IMCuE"
-                                  layout="responsive"
-                                  width="100"
-                                  height="55">
-                                </amp-youtube>
+                                <div class="video-player">
+                                  <amp-video id="myVideo6"
+                                    controls
+                                    width="100"
+                                    height="55"
+                                    layout="responsive"
+                                    src="../assets/Pre-School-Day-Care-and-Creche-Footprints.mp4">
+                                  </amp-video>
+
+                                  <div id="myOverlay6" class="click-to-play-overlay">
+                                    <div class="play-icon" role="button" tabindex="0" on="tap:myOverlay6.hide, myVideo6.play"></div>
+
+                                    <amp-img class="poster-image" layout="fill" src="../assets/Pre-School-Day-Care-and-Creche-Footprints.jpg"></amp-img>
+                                  </div>
+                                </div>
                             </div>
                             <p class="card-title h5 mb-2">Kit Content for Upper KG</p>
                             <p class="m-0">(Age group: 4.5 - 5.5 Years)</p>
@@ -1022,12 +1207,21 @@ header.masthead h1{font-size:2.5rem;}
                        <div class="card border-0 shadow program-card">
                           <div class="card-body pb-3">
                             <div class="mb-3">
-                                <amp-youtube
-                                  data-videoid="wdcMy7IMCuE"
-                                  layout="responsive"
-                                  width="100"
-                                  height="55">
-                                </amp-youtube>
+                                <div class="video-player">
+                                  <amp-video id="myVideo7"
+                                    controls
+                                    width="100"
+                                    height="55"
+                                    layout="responsive"
+                                    src="../assets/Pre-School-Day-Care-and-Creche-Footprints.mp4">
+                                  </amp-video>
+
+                                  <div id="myOverlay7" class="click-to-play-overlay">
+                                    <div class="play-icon" role="button" tabindex="0" on="tap:myOverlay7.hide, myVideo7.play"></div>
+
+                                    <amp-img class="poster-image" layout="fill" src="../assets/Pre-School-Day-Care-and-Creche-Footprints.jpg"></amp-img>
+                                  </div>
+                                </div>
                             </div>
                             <p class="card-title h5 mb-2">Footprints Box</p>
                             <p class="m-0"> (Lorem ipsum dolor sit amet, consectetur adipisicing elit.)</p>
@@ -1163,11 +1357,20 @@ header.masthead h1{font-size:2.5rem;}
         <div class="row mt-4 justify-content-center">  
            <div class="col-12 col-lg-8">
             <div class="card card-body border-0 shadow p-2 p-lg-3">
-             <amp-vimeo data-videoid="357520523"
-                  layout="responsive"
-                  width="16"
-                  height="9">
-             </amp-vimeo>
+             <div class="video-player">
+                  <amp-video id="myVideo8"
+                    controls
+                    width="16"
+                    height="9"
+                    layout="responsive"
+                    src="../assets/speaking-pen.mp4">
+                  </amp-video>
+
+                  <div id="myOverlay8" class="click-to-play-overlay">
+                    <div class="play-icon" role="button" tabindex="0" on="tap:myOverlay8.hide, myVideo8.play"></div>
+                    <amp-img class="poster-image" layout="fill" src="../assets/speaking-pen.jpg"></amp-img>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
@@ -1186,38 +1389,38 @@ header.masthead h1{font-size:2.5rem;}
                <div class="col-12">
                  <amp-accordion class="sample"
                           expand-single-section animate> 
-                        <section class="card border-0 mb-4 bg-light" expanded>
-                            <h4 class="card-header border-0 bg-light">What is Footprints@HOME? <amp-img src="../assets/icon/chevron-down-solid-blue.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                        <section expanded class="card border-0 mb-4 bg-light">
+                            <h4 class="card-header border-0 bg-light">What is Footprints@HOME?</h4>
                          <div class="card-body pt-1">
                             Footprints@HOME is our path breaking program to ensure ongoing learning for young children when they can't go to any pre-school. 'My Footprints Box' is a monthly subscription box service while 'Online Preschool' is Live Interactive Classes. So that you can choose what you prefer.
                           </div>
                       </section>
                         <section class="card border-0 mb-4 bg-light">
-                            <h4 class="card-header border-0 bg-light">What do I get in a kit? <amp-img src="../assets/icon/chevron-down-solid-blue.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                            <h4 class="card-header border-0 bg-light">What do I get in a kit?</h4>
                         <div class="card-body pt-1">
                             Our Kit contains Age-appropriate books, games, worksheets and toys so that child is productively engaged through out the month.
                          </div>
                       </section>
                         <section class="card border-0 mb-4 bg-light">
-                            <h4 class="card-header border-0 bg-light">Is parental involvement required? <amp-img src="../assets/icon/chevron-down-solid-blue.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                            <h4 class="card-header border-0 bg-light">Is parental involvement required?</h4>
                         <div class="card-body pt-1">
                             While we provide the relevant guidelines, some parental support is required in early period so that child gets acclimatised in the new Online environment.
                         </div>
                       </section>
                         <section class="card border-0 mb-4 bg-light">
-                            <h4 class="card-header border-0 bg-light">Where are all the programs available? <amp-img src="../assets/icon/chevron-down-solid-blue.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                            <h4 class="card-header border-0 bg-light">Where are all the programs available?</h4>
                         <div class="card-body pt-1">
                         Footprints@HOME is available all across India!
                         </div>
                       </section>
                         <section class="card border-0 mb-4 bg-light">
-                            <h4 class="card-header border-0 bg-light">How do I reschedule a class? <amp-img src="../assets/icon/chevron-down-solid-blue.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                            <h4 class="card-header border-0 bg-light">How do I reschedule a class?</h4>
                         <div class="card-body pt-1">
                           You cannot reschedule a class. 
                         </div>
                       </section>
                         <section class="card border-0 mb-4 bg-light">
-                            <h4 class="card-header border-0 bg-light">For what age groups is this available for? <amp-img src="../assets/icon/chevron-down-solid-blue.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                            <h4 class="card-header border-0 bg-light">For what age groups is this available for?</h4>
                         <div class="card-body pt-1">
                             We have age-specific kits for 0.5-1.5 year old, 1.5-2.5 year olds, 2.5-3.5 year olds, 3.5-4.5 year olds & 4.5-5.5 year olds.
                         </div>
@@ -1248,12 +1451,20 @@ header.masthead h1{font-size:2.5rem;}
                     <p class="card-title h5 mb-3">Nikhil Kumar</p>
                     <p class="card-title h5 mb-2">How webinars helped!</p>
                     <div class="m-0">
-                     <amp-youtube
-                      data-videoid="Sqx4uKIyXYg"
-                      layout="responsive"
-                      width="100"
-                      height="55">
-                    </amp-youtube>
+                      <div class="video-player">
+                          <amp-video id="myVideo9"
+                            controls
+                            width="100"
+                            height="55"
+                            layout="responsive"
+                            src="../assets/nikhil-kumar-01.mp4">
+                          </amp-video>
+
+                          <div id="myOverlay9" class="click-to-play-overlay">
+                            <div class="play-icon" role="button" tabindex="0" on="tap:myOverlay9.hide, myVideo9.play"></div>
+                            <amp-img class="poster-image" layout="fill" src="../assets/nikhil-kumar.jpg"></amp-img>
+                          </div>
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -1269,12 +1480,20 @@ header.masthead h1{font-size:2.5rem;}
                     <p class="card-title h5 mb-3">Priti</p>
                     <p class="card-title h5 mb-2">Online Preschool</p>
                     <div class="m-0">
-                     <amp-youtube
-                      data-videoid="orsoodbfy9U"
-                      layout="responsive"
-                      width="100"
-                      height="55">
-                    </amp-youtube>
+                     <div class="video-player">
+                          <amp-video id="myVideo10"
+                            controls
+                            width="100"
+                            height="55"
+                            layout="responsive"
+                            src="../assets/priti-01.mp4">
+                          </amp-video>
+
+                          <div id="myOverlay10" class="click-to-play-overlay">
+                            <div class="play-icon" role="button" tabindex="0" on="tap:myOverlay10.hide, myVideo10.play"></div>
+                            <amp-img class="poster-image" layout="fill" src="../assets/priti-01.jpg"></amp-img>
+                          </div>
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -1301,7 +1520,7 @@ header.masthead h1{font-size:2.5rem;}
                   </div>
                   <div class="card border-0 m-0 bg-transparent">
                     <div class="card-body p-2 d-flex align-items-center justify-content-center">
-                          <amp-img alt="Pioneer" class="img-fluid" src="../assets/img/featured/Pioneer.png"width="228" height="106" layout="fixed"></amp-img> 
+                          <amp-img alt="Pioneer" class="img-fluid" src="../assets/img/featured/Pioneer.png" width="228" height="106" layout="fixed"></amp-img> 
                     </div>
                   </div>
                   <div class="card border-0 m-0 bg-transparent">
@@ -1332,6 +1551,15 @@ header.masthead h1{font-size:2.5rem;}
         <a on="tap:AMP.setState({showLightbox: true})" class="btn btn-success btn-block btn-lg font-weight-bold">Book A Trial Class</a>
       </div>  
   </section>
+
+    
+<section class="bg-light fixed-bottom d-block d-sm-none">
+  <div class="d-flex">
+    <a on="tap:AMP.setState({showLightbox: true})" class="btn btn-request btn-common btn-block btn-lg font-weight-bold m-0"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7e39d3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></span> Free Trial </a>
+      
+    <a href="tel:9876543210" class="btn btn-contact btn-common btn-block btn-lg font-weight-bold m-0"> <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#04BF74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone-call"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span> Call Us</a>
+  </div>  
+</section>
     
 <amp-lightbox id="my-bindable-lightbox"
   [open]="showLightbox"
@@ -1348,38 +1576,6 @@ header.masthead h1{font-size:2.5rem;}
       </div>
       <div class="modal-body">
         <form method="GET" action="/documentation/examples/api/submit-form-xhr" target="_top">
-          <div id="short-from">
-          <div class="form-group">
-            <label for="validationCustom08" class="sr-only">Which category are you interetesd in?</label>
-             <select class="custom-select badge-pill" id="validationCustom08" required>
-                <option selected disabled value="">Which category are you interetesd in?</option>
-                 <option value="chess">Chess</option>
-                 <option value="coding">Coding</option>
-                 <option value="creative-arts">Creative Arts</option>
-                 <option value="dance">Dance</option>
-                 <option value="french">French</option>
-                 <option value="maths">Maths</option>
-                 <option value="music">Music</option>
-                 <option value="theatre">Theatre</option>
-                 <option value="yoga">Yoga</option>
-              </select>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
-          </div>
-          <div class="form-group">
-             <label for="validationCustom09" class="sr-only">Choose course?</label>
-             <select class="custom-select badge-pill" id="validationCustom09" required>
-                <option selected disabled value="">Choose course?</option>
-                 <option value="opt">Beginner</option>
-                 <option value="opt">Expert</option>
-                 <option value="opt">Intermediate</option>
-              </select>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
-          </div>
-          </div>
           <div id="fullForm" class="opt">
           <div class="form-group">
               <label for="validationName01" class="sr-only">Your Name</label>

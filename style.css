@@ -295,9 +295,7 @@ header.masthead h1 {
     transform: translate(-50%, -50%);
     width: 110px;
 }
-.parentReview .card .card-body {
-    padding-top: 5em;
-}
+
 .parentReview .card-body .card-title:first-child {
     font-weight: 800;
     color: #404E65;
@@ -634,7 +632,6 @@ header.masthead {
 .masthead .masthead-bg { width: 80vh; height: 80vh;}
 .program-card { width: 32%; min-width: 345px;}
 .feature-img {  width: 180px;}
-.parentReview .col { margin-top: 3.5em;}
 .masthead {
     height:10vh;
     min-height: 0;
